@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "515717897547",
+    "project_id": "ai-powered-shopping",
+    "storage_bucket": "ai-powered-shopping.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:515717897547:android:919b13bb8061ddbe1ddcce",
+        "android_client_info": {
+          "package_name": "com.example.ai_powered_shopping"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFuKpK13fVWYsNilZqLfNpgTGrzVWVbGA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
