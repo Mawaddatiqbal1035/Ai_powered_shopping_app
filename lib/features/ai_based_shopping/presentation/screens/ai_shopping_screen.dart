@@ -1,4 +1,3 @@
-
 import 'package:ai_powered_shopping/features/ai_based_shopping/presentation/controller/gemini_recommend_product_controller.dart';
 import 'package:ai_powered_shopping/features/ai_based_shopping/presentation/widgets/catalog_screen.dart';
 import 'package:flutter/cupertino.dart';
@@ -162,7 +161,7 @@ class _AiShoppingScreenState extends State<AiShoppingScreen> {
       if (query.isEmpty) continue;
 
       final uri =
-          'https://dummyjson.com/products/search?q=${Uri.encodeComponent(query)}';
+          'https://dummyjson.com/products/search?q=${Uri.encodeComponent(query)}&limit=100&skip=0';
       print("Searching for \"$query\" → $uri");
 
       final response = await http.get(Uri.parse(uri));
@@ -199,7 +198,7 @@ class _AiShoppingScreenState extends State<AiShoppingScreen> {
 
     // Finally, update the controller’s list
     geminiController.setProducts(combined);
-    print("✅ Total products combined: ${combined.length}");
+    print(" Total products combined: ${combined.length}");
   }
 
 
@@ -210,13 +209,13 @@ class _AiShoppingScreenState extends State<AiShoppingScreen> {
       setState(() { isLoading = true; });
 
       final List<String> geminiResult = geminiController
-          .getProductKeyword(skinToneController.text, weatherController.text);
+          .getProductKeywords(skinToneController.text, weatherController.text);
       print("Keywords from controller: $geminiResult");
 
       if (geminiResult.isNotEmpty) {
         await fetchShoppingProducts(geminiResult);
       } else {
-        print("⚠️ No keywords generated");
+        print(" No keywords generated");
         // Optionally clear old products if no keywords:
         geminiController.setProducts([]);
       }
@@ -229,4 +228,3 @@ class _AiShoppingScreenState extends State<AiShoppingScreen> {
 
 
 }
-

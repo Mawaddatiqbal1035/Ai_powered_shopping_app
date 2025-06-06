@@ -64,7 +64,7 @@ class CatalogScreen extends StatelessWidget {
                         padding: const EdgeInsets.all(8.0),
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: isAdded ? Colors.red : Color(0xff02ed70),
+                            backgroundColor: isAdded ? Colors.red :  Color(0xFF152049),
                           ),
                           onPressed: () async {
                             if (isAdded) {
@@ -90,7 +90,9 @@ class CatalogScreen extends StatelessWidget {
                               }
                             }
                           },
-                          child: Text(isAdded ? "Delete" : "Add to cart"),
+                          child: Text(isAdded ? "Delete" : "Add to cart",style: TextStyle(
+                            color: Colors.white
+                          ),),
                         ),
                       ),
                     ],

@@ -36,23 +36,8 @@ class _SignupScreenState extends State<SignupScreen> {
                 child: Column(
                   children: [
                     // Top container
-                    Container(
-                      width: s.width * 0.25,
-                      height: s.height * 0.07,
-                      decoration: BoxDecoration(
-                        color: const Color(0xff00ff75),
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                      child: Center(
-                        child: Text(
-                          AppAuthenticationTextsExpanded.signup,
-                          style: TextStyle(
-                            fontSize: s.width * 0.020 + s.height * 0.019,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ),
+                    Text("Signup",style: TextStyle(color: Colors.white,fontSize: s.height*0.040,
+                    fontWeight: FontWeight.bold),),
                     const SizedBox(height: 10),
 
 
@@ -117,13 +102,13 @@ class _SignupScreenState extends State<SignupScreen> {
                             controller: passwordTextController,
                             decoration: InputDecoration(
                               hintText: AppAuthenticationTextsExpanded.signupPasswordHintText,
-                              fillColor: const Color(0xff00ff75),
+                              fillColor: const Color(0xff2d418b),
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(15)),
                               filled: true,
                               hintStyle: TextStyle(
                                 fontSize: s.width * 0.013 + s.height * 0.010,
-                                color: Colors.black,
+                                color: Colors.white,
                               ),
                             ),
                             textAlign: TextAlign.center,
@@ -200,7 +185,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             shape: const BeveledRectangleBorder(),
                           ),
                           child: const Icon(Icons.g_mobiledata_rounded,
-                              color: Color(0xff00ff75)),
+                              color: Colors.white),
                         ),
                         ElevatedButton(
                           onPressed: () {},
@@ -209,7 +194,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             fixedSize: Size(s.height * 0.130, s.width * 0.080),
                             shape: const BeveledRectangleBorder(),
                           ),
-                          child: const Icon(Icons.facebook, color: Color(0xff00ff75)),
+                          child: const Icon(Icons.facebook, color: Colors.white),
                         ),
                       ],
                     ),
@@ -224,7 +209,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           AppAuthenticationTextsExpanded.alreadyHaveAccount,
                           style: TextStyle(
                             fontSize: s.width * 0.010 + s.height * 0.010,
-                            color: const Color(0xff00ff75),
+                            color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),
                         ),

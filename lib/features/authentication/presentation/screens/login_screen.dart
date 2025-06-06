@@ -30,31 +30,8 @@ class _LoginScreenState extends State<LoginScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 // Login Button
-                Stack(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(top: 10),
-                      child: Container(
-                        width: s.width * 0.27,
-                        height: s.height * 0.07,
-                        decoration: BoxDecoration(
-                          color: const Color(0xff00ff75),
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                        child: Center(
-                          child: Text(
-                            AppAuthenticationTextsExpanded.login,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: s.width * 0.020 + s.height * 0.020,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+                Text("Login",style: TextStyle(color: Colors.white,fontSize: s.height*0.040,
+                    fontWeight: FontWeight.bold),),
                 const SizedBox(height: 16),
 
                 // Image
@@ -117,7 +94,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: Row(
                         children: [
                           Checkbox(
-                            checkColor: Color(0xff00ff75),
+                            checkColor: Colors.white,
                             value: rememberMe,
                             onChanged: (value) {
                               setState(() {
@@ -148,7 +125,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     );
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xff00ff75),
+                    backgroundColor: Color(0xff2d418b),
                     shape: const CircleBorder(),
                     padding: const EdgeInsets.all(20),
                     elevation: 4.5,
